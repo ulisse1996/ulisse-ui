@@ -11,7 +11,13 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.0
+      - name: Install and Build
+        run: pnpm ci && pnpm run build-storybook
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: dist/storybook
-          build_command: pnpm run build-storybook
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          folder: storybook-static
+          clean: true
+          target-folder: docs
