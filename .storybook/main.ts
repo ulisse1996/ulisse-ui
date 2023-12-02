@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import { mergeConfig } from 'vite';
 
 const config: StorybookConfig = {
   stories: ['../lib/**/*.mdx', '../lib/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -15,14 +16,13 @@ const config: StorybookConfig = {
     autodocs: 'tag',
   },
   viteFinal: async (c) => {
-    return {
-      ...c,
+    return mergeConfig(c, {
       build: {
         rollupOptions: {
-          external: [],
+          input: ['lib/index.ts'],
         },
       },
-    };
+    });
   },
 };
 export default config;
