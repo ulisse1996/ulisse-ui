@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary: 38 77 197;
+        --primary-foreground: 246 246 246;
+        --destructive: 190 49 68;
+        --destructive-foreground: 246 246 246;
+        --secondary: 207 217 247;
+        --secondary-foreground: 30 30 30;
+        --warning: 251 191 36;
+        --warning-foreground: 7 7 8;
+        --success: 34 187 51;
+        --success-foreground: 246 246 246;
+        --muted: 153 153 153;
+        --muted-foreground: 113 113 122;
+        --background: 255 255 255;
+        --card: 255 255 255;
+        --card-foreground: 7 7 8;
+        --input: 228 228 231;
+        --radix-accordion-content-height: 120px
+    }
+}
