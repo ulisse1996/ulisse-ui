@@ -20,6 +20,7 @@ const config: StorybookConfig = {
       build: {
         rollupOptions: {
           input: ['lib/index.ts'],
+          external: [],
         },
       },
     });
