@@ -60,6 +60,9 @@ dependencies:
   '@react-aria/focus':
     specifier: ^3.15.0
     version: 3.15.0(react@18.2.0)
+  '@react-aria/i18n':
+    specifier: ^3.9.0
+    version: 3.9.0(react@18.2.0)
   '@react-aria/numberfield':
     specifier: ^3.10.0
     version: 3.10.0(react-dom@18.2.0)(react@18.2.0)
@@ -84,6 +87,9 @@ dependencies:
   tailwind-merge:
     specifier: ^2.0.0
     version: 2.0.0
+  ulisse-ui:
+    specifier: 'link:'
+    version: 'link:'
 
 devDependencies:
   '@faker-js/faker':

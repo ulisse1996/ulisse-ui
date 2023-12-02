@@ -105,6 +105,7 @@
     "@react-aria/calendar": "^3.5.3",
     "@react-aria/datepicker": "^3.9.0",
     "@react-aria/focus": "^3.15.0",
+    "@react-aria/i18n": "^3.9.0",
     "@react-aria/numberfield": "^3.10.0",
     "@react-aria/searchfield": "^3.6.0",
     "autoprefixer": "^10.4.16",
@@ -112,7 +113,8 @@
     "lucide-react": "^0.293.0",
     "postcss": "^8.4.31",
     "rollup-plugin-pure": "^0.2.1",
-    "tailwind-merge": "^2.0.0"
+    "tailwind-merge": "^2.0.0",
+    "ulisse-ui": "link:"
   },
   "pnpm": {
     "overrides": {
