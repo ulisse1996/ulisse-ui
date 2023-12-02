@@ -13,7 +13,7 @@ jobs:
         with:
           version: 8
       - name: Install and Build
-        run: pnpm install && pnpm run build-storybook
+        run: pnpm install && pnpm run build-storybook && touch storybook-static/.nojekyll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
