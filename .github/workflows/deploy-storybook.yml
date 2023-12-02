@@ -21,4 +21,4 @@ jobs:
           branch: gh-pages
           folder: storybook-static
           clean: true
-          target-folder: storybook-static
+          target-folder: docs
