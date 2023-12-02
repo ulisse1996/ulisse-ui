@@ -72,15 +72,30 @@ dependencies:
   '@react-aria/searchfield':
     specifier: ^3.6.0
     version: 3.6.0(react@18.2.0)
+  '@react-aria/utils':
+    specifier: ^3.22.0
+    version: 3.22.0(react@18.2.0)
   '@react-stately/calendar':
     specifier: ^3.4.2
     version: 3.4.2(react@18.2.0)
+  '@react-stately/datepicker':
+    specifier: ^3.9.0
+    version: 3.9.0(react@18.2.0)
+  '@react-stately/numberfield':
+    specifier: ^3.7.0
+    version: 3.7.0(react@18.2.0)
+  '@react-stately/searchfield':
+    specifier: ^3.5.0
+    version: 3.5.0(react@18.2.0)
   autoprefixer:
     specifier: ^10.4.16
     version: 10.4.16(postcss@8.4.31)
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
+  clsx:
+    specifier: ^2.0.0
+    version: 2.0.0
   lucide-react:
     specifier: ^0.293.0
     version: 0.293.0(react@18.2.0)
@@ -93,9 +108,6 @@ dependencies:
   tailwind-merge:
     specifier: ^2.0.0
     version: 2.0.0
-  ulisse-ui:
-    specifier: 'link:'
-    version: 'link:'
 
 devDependencies:
   '@faker-js/faker':

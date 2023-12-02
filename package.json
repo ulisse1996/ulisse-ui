@@ -109,14 +109,18 @@
     "@react-aria/i18n": "^3.9.0",
     "@react-aria/numberfield": "^3.10.0",
     "@react-aria/searchfield": "^3.6.0",
+    "@react-aria/utils": "^3.22.0",
     "@react-stately/calendar": "^3.4.2",
+    "@react-stately/datepicker": "^3.9.0",
+    "@react-stately/numberfield": "^3.7.0",
+    "@react-stately/searchfield": "^3.5.0",
     "autoprefixer": "^10.4.16",
     "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
     "lucide-react": "^0.293.0",
     "postcss": "^8.4.31",
     "rollup-plugin-pure": "^0.2.1",
-    "tailwind-merge": "^2.0.0",
-    "ulisse-ui": "link:"
+    "tailwind-merge": "^2.0.0"
   },
   "pnpm": {
     "overrides": {
