@@ -23,7 +23,7 @@ export default meta;
 export const Default: Story = {
   render: () => {
     return (
-      <div className="p-24">
+      <div className="max-w-md p-4">
         <Card>
           <CardHeader>
             <CardTitle>My Card Title</CardTitle>
@@ -52,7 +52,7 @@ export const Default: Story = {
 export const ProductCard: Story = {
   render: () => {
     return (
-      <div className="p-24">
+      <div className="max-w-md p-4">
         <Card>
           <Image
             className="mb-6 rounded-t-lg border-t"
