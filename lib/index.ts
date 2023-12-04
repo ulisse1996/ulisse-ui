@@ -16,6 +16,7 @@ export * from './menu';
 export * from './pagination';
 export * from './popover';
 export * from './radio-group';
+export * from './rating';
 export * from './search';
 export * from './select';
 export * from './skeleton';
