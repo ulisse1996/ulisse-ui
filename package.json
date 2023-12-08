@@ -1,9 +1,10 @@
 {
-  "name": "ulisse-ui",
+  "name": "@ulisse1996/ui",
   "private": false,
   "version": "1.0.0",
   "type": "module",
   "module": "dist/index.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A simple UI Library built on top of Tailwind and React",
   "sideEffects": false,
@@ -121,6 +122,7 @@
     "lucide-react": "^0.293.0",
     "postcss": "^8.4.31",
     "rollup-plugin-pure": "^0.2.1",
+    "swiper": "^11.0.5",
     "tailwind-merge": "^2.0.0"
   },
   "pnpm": {

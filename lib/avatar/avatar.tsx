@@ -1,6 +1,10 @@
 import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
-import type { ElementType, ForwardedRef } from 'react';
+import type {
+  ElementType,
+  ForwardedRef,
+  ForwardRefExoticComponent,
+} from 'react';
 import { forwardRef, useState } from 'react';
 
 import type { PolymorphicProps } from '@/types';
@@ -57,8 +61,10 @@ function InternalAvatar<T extends ElementType = typeof defaultElement>(
   );
 }
 
-const Avatar = forwardRef(InternalAvatar);
+const Avatar = forwardRef(InternalAvatar) as <T extends ElementType>(
+  props: AvatarProps<T> & { ref?: ForwardedRef<HTMLSpanElement> },
+) => ReturnType<typeof InternalAvatar>;
 
-Avatar.displayName = 'Avatar';
+(Avatar as ForwardRefExoticComponent<AvatarProps<any>>).displayName = 'Avatar';
 
 export { Avatar, type AvatarProps };

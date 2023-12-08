@@ -28,8 +28,8 @@ export const WithImage: Story = {
     return (
       <Avatar
         src="https://randompicturegenerator.com/img/cat-generator/g37b82da0af399ee430f5787f93289fa6bf0cee78a334568707574b938b0c2dd44c1e6505904a70b5cb55dbb1f3116639_640.jpg"
-        alt="test"
         {...props}
+        alt="test"
       />
     );
   },
@@ -38,14 +38,14 @@ export const WithImage: Story = {
 export const WithFallback: Story = {
   ...standardArgs,
   render: (props) => {
-    return <Avatar alt="test" {...props} />;
+    return <Avatar {...props} alt="test" />;
   },
 };
 
 export const WithFailedImage: Story = {
   ...standardArgs,
   render: (props) => {
-    return <Avatar src="bad-url" alt="test" {...props} />;
+    return <Avatar src="bad-url" {...props} alt="test" />;
   },
 };
 
@@ -59,8 +59,8 @@ export const WithUnpic: Story = {
         width={400}
         height={300}
         src="https://cdn.shopify.com/static/sample-images/bath.jpeg"
-        alt="test"
         {...props}
+        alt="test"
       />
     );
   },
@@ -72,13 +72,13 @@ export const CustomSize: Story = {
     return (
       <Avatar
         as={Image}
+        src="https://cdn.shopify.com/static/sample-images/bath.jpeg"
+        className="h-24 w-24"
+        {...props}
         layout="constrained"
         width={400}
         height={300}
-        src="https://cdn.shopify.com/static/sample-images/bath.jpeg"
         alt="test"
-        className="h-24 w-24"
-        {...props}
       />
     );
   },
