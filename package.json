@@ -7,7 +7,7 @@
   "version": "1.0.0",
   "type": "module",
   "module": "dist/index.js",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "description": "A simple UI Library built on top of Tailwind and React",
   "sideEffects": false,
@@ -19,7 +19,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./package.json": "./package.json"
   },
@@ -34,14 +35,11 @@
   },
   "homepage": "http://ulisse1996.github.io/ulisse-ui",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsup --dts",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "predeploy": "npm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -62,7 +60,6 @@
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
     "@unpic/react": "^0.1.3",
-    "@vitejs/plugin-react": "^4.2.0",
     "eslint": "^8.54.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
@@ -79,17 +76,13 @@
     "eslint-plugin-tailwindcss": "^3.13.0",
     "eslint-plugin-testing-library": "^5.11.1",
     "eslint-plugin-unused-imports": "^3.0.0",
-    "gh-pages": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup-plugin-banner2": "^1.2.2",
     "storybook": "^7.6.0",
     "tailwindcss": "^3.3.5",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.2",
-    "vite": "^5.0.4",
-    "vite-plugin-dts": "^3.6.3",
-    "vite-tsconfig-paths": "^4.2.1"
+    "tsup": "^8.0.1"
   },
   "dependencies": {
     "@ark-ui/react": "^1.1.0",
@@ -124,7 +117,6 @@
     "clsx": "^2.0.0",
     "lucide-react": "^0.293.0",
     "postcss": "^8.4.31",
-    "rollup-plugin-pure": "^0.2.1",
     "swiper": "^11.0.5",
     "tailwind-merge": "^2.0.0"
   },
