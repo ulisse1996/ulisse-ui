@@ -1,0 +1,25 @@
+import{a as G,j as m}from"./jsx-runtime-29545a09.js";import{r}from"./index-76fb7be0.js";import{_ as E}from"./extends-98964cd2.js";import{$ as J,b as H}from"./index-e2809c0a.js";import{$ as Q,b as U,c as w}from"./index-7f80cad2.js";import{$ as Y}from"./index-11a3acc1.js";import{$ as Z}from"./index-57a346df.js";import{$ as ee}from"./index-1f3e1a8a.js";import{L as te}from"./label-4f316bdd.js";import{c as N}from"./utils-636fbba8.js";import{C as re}from"./check-9fcffaf0.js";import"./_commonjsHelpers-de833af9.js";import"./index-d3ea75b5.js";import"./createLucideIcon-de0f8b79.js";const T="Checkbox",[ae,Ee]=Q(T),[oe,ce]=ae(T),se=r.forwardRef((e,o)=>{const{__scopeCheckbox:t,name:n,checked:d,defaultChecked:s,required:u,disabled:l,value:p="on",onCheckedChange:y,...M}=e,[c,g]=r.useState(null),X=J(o,a=>g(a)),v=r.useRef(!1),S=c?!!c.closest("form"):!0,[b=!1,_]=U({prop:d,defaultProp:s,onChange:y}),z=r.useRef(b);return r.useEffect(()=>{const a=c==null?void 0:c.form;if(a){const f=()=>_(z.current);return a.addEventListener("reset",f),()=>a.removeEventListener("reset",f)}},[c,_]),r.createElement(oe,{scope:t,state:b,disabled:l},r.createElement(H.button,E({type:"button",role:"checkbox","aria-checked":i(b)?"mixed":b,"aria-required":u,"data-state":V(b),"data-disabled":l?"":void 0,disabled:l,value:p},M,{ref:X,onKeyDown:w(e.onKeyDown,a=>{a.key==="Enter"&&a.preventDefault()}),onClick:w(e.onClick,a=>{_(f=>i(f)?!0:!f),S&&(v.current=a.isPropagationStopped(),v.current||a.stopPropagation())})})),S&&r.createElement(ie,{control:c,bubbles:!v.current,name:n,value:p,checked:b,required:u,disabled:l,style:{transform:"translateX(-100%)"}}))}),ne="CheckboxIndicator",de=r.forwardRef((e,o)=>{const{__scopeCheckbox:t,forceMount:n,...d}=e,s=ce(ne,t);return r.createElement(ee,{present:n||i(s.state)||s.state===!0},r.createElement(H.span,E({"data-state":V(s.state),"data-disabled":s.disabled?"":void 0},d,{ref:o,style:{pointerEvents:"none",...e.style}})))}),ie=e=>{const{control:o,checked:t,bubbles:n=!0,...d}=e,s=r.useRef(null),u=Y(t),l=Z(o);return r.useEffect(()=>{const p=s.current,y=window.HTMLInputElement.prototype,c=Object.getOwnPropertyDescriptor(y,"checked").set;if(u!==t&&c){const g=new Event("click",{bubbles:n});p.indeterminate=i(t),c.call(p,i(t)?!1:t),p.dispatchEvent(g)}},[u,t,n]),r.createElement("input",E({type:"checkbox","aria-hidden":!0,defaultChecked:i(t)?!1:t},d,{tabIndex:-1,ref:s,style:{...e.style,...l,position:"absolute",pointerEvents:"none",opacity:0,margin:0}}))};function i(e){return e==="indeterminate"}function V(e){return i(e)?"indeterminate":e?"checked":"unchecked"}const W=se,le=de,h=r.forwardRef(({className:e,label:o,id:t,...n},d)=>G("div",{className:"flex items-center space-x-2",children:[m(W,{ref:d,id:t,className:N("peer h-4 w-4 shrink-0 rounded-md border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",e),...n,children:m(le,{className:N("flex items-center justify-center text-current"),children:m(re,{className:"h-4 w-4"})})}),o&&m(te,{htmlFor:t,children:o})]}));h.displayName=W.displayName;try{h.displayName="Checkbox",h.__docgenInfo={description:"",displayName:"Checkbox",props:{label:{defaultValue:null,description:"",name:"label",required:!1,type:{name:"string"}},asChild:{defaultValue:null,description:"",name:"asChild",required:!1,type:{name:"boolean"}}}}}catch{}const Me={component:h,title:"Form/Checkbox"},$={args:{"aria-label":"My Checkbox"}},k={args:{id:"check",label:"My Checkbox"}},C={args:{id:"check",label:"My Checkbox"},render:e=>{const[o,t]=r.useState(!1);return m(h,{...e,checked:o,onCheckedChange:t})}},x={args:{id:"check",label:"My Checkbox",disabled:!0}};var P,R,D;$.parameters={...$.parameters,docs:{...(P=$.parameters)==null?void 0:P.docs,source:{originalSource:`{
+  args: {
+    'aria-label': 'My Checkbox'
+  }
+}`,...(D=(R=$.parameters)==null?void 0:R.docs)==null?void 0:D.source}}};var I,L,q;k.parameters={...k.parameters,docs:{...(I=k.parameters)==null?void 0:I.docs,source:{originalSource:`{
+  args: {
+    id: 'check',
+    label: \`My Checkbox\`
+  }
+}`,...(q=(L=k.parameters)==null?void 0:L.docs)==null?void 0:q.source}}};var j,O,B;C.parameters={...C.parameters,docs:{...(j=C.parameters)==null?void 0:j.docs,source:{originalSource:`{
+  args: {
+    id: 'check',
+    label: \`My Checkbox\`
+  },
+  render: props => {
+    const [checked, setChecked] = useState<CheckedState>(false);
+    return <Checkbox {...props} checked={checked} onCheckedChange={setChecked} />;
+  }
+}`,...(B=(O=C.parameters)==null?void 0:O.docs)==null?void 0:B.source}}};var A,F,K;x.parameters={...x.parameters,docs:{...(A=x.parameters)==null?void 0:A.docs,source:{originalSource:`{
+  args: {
+    id: 'check',
+    label: \`My Checkbox\`,
+    disabled: true
+  }
+}`,...(K=(F=x.parameters)==null?void 0:F.docs)==null?void 0:K.source}}};const Se=["Default","WithLabel","Controlled","Disabled"];export{C as Controlled,$ as Default,x as Disabled,k as WithLabel,Se as __namedExportsOrder,Me as default};
