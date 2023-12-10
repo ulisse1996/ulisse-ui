@@ -16,12 +16,13 @@ interface CarouselSlideProps extends HTMLAttributes<HTMLLIElement> {
 }
 
 const CarouselSlide = forwardRef<HTMLLIElement, CarouselSlideProps>(
-  ({ className, ...props }, ref) => {
+  ({ className, isSnapPoint, ...props }, ref) => {
     return (
       <li
         {...props}
         className={cn(
-          'h-[250px] w-[250px] flex-shrink-0 snap-start',
+          'h-[250px] w-[250px] flex-shrink-0',
+          { 'snap-start': isSnapPoint },
           className,
         )}
         ref={ref}
