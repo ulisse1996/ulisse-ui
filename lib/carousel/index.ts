@@ -1,6 +1,6 @@
 export {
   Carousel,
-  CarouselItem,
-  type CarouselItemProps,
   type CarouselProps,
+  CarouselSlide,
+  type CarouselSlideProps,
 } from './carousel';

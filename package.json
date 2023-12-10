@@ -4,10 +4,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.0.1",
+  "version": "1.0.3",
   "type": "module",
-  "module": "dist/index.js",
   "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "description": "A simple UI Library built on top of Tailwind and React",
   "sideEffects": false,
@@ -19,7 +19,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
     "./package.json": "./package.json"
@@ -35,7 +35,7 @@
   },
   "homepage": "http://ulisse1996.github.io/ulisse-ui",
   "scripts": {
-    "build": "tsup --dts",
+    "build": "vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -76,13 +76,16 @@
     "eslint-plugin-tailwindcss": "^3.13.0",
     "eslint-plugin-testing-library": "^5.11.1",
     "eslint-plugin-unused-imports": "^3.0.0",
+    "globby": "14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.6.0",
     "tailwindcss": "^3.3.5",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.2",
-    "tsup": "^8.0.1"
+    "vite": "^5.0.7",
+    "vite-plugin-dts": "^3.6.4",
+    "vite-tsconfig-paths": "^4.2.2"
   },
   "dependencies": {
     "@ark-ui/react": "^1.1.0",
@@ -117,7 +120,7 @@
     "clsx": "^2.0.0",
     "lucide-react": "^0.293.0",
     "postcss": "^8.4.31",
-    "swiper": "^11.0.5",
+    "react-snap-carousel": "^0.3.2",
     "tailwind-merge": "^2.0.0"
   },
   "pnpm": {
