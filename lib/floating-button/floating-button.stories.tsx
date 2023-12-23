@@ -81,7 +81,10 @@ export const Loading: Story = {
           {...props}
           isLoading={isLoading}
         />
-        <FloatingButton onClick={() => setLoading((prev) => !prev)}>
+        <FloatingButton
+          className="right-40"
+          onClick={() => setLoading((prev) => !prev)}
+        >
           {`${!isLoading ? `Start` : `Stop`} loading`}
         </FloatingButton>
       </div>

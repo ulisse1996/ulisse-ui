@@ -13,7 +13,7 @@ const FloatingButton = forwardRef<HTMLButtonElement, FloatingButtonProps>(
     return (
       <Button
         className={cn(
-          'absolute fixed',
+          'fixed',
           {
             'left-8 bottom-8': side === 'left',
             'right-8 bottom-8': side === 'right',
