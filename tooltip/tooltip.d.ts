@@ -1,0 +1,10 @@
+import * as TooltipPrimitive from '@radix-ui/react-tooltip';
+type TooltipProviderProps = TooltipPrimitive.TooltipProviderProps;
+type TooltipProps = TooltipPrimitive.TooltipProps;
+type TooltipTriggerProps = TooltipPrimitive.TooltipTriggerProps;
+type TooltipContentProps = TooltipPrimitive.TooltipContentProps;
+declare const TooltipProvider: import("react").FC<TooltipPrimitive.TooltipProviderProps>;
+declare const Tooltip: import("react").FC<TooltipPrimitive.TooltipProps>;
+declare const TooltipTrigger: import("react").ForwardRefExoticComponent<TooltipPrimitive.TooltipTriggerProps & import("react").RefAttributes<HTMLButtonElement>>;
+declare const TooltipContent: import("react").ForwardRefExoticComponent<Omit<TooltipPrimitive.TooltipContentProps & import("react").RefAttributes<HTMLDivElement>, "ref"> & import("react").RefAttributes<HTMLDivElement>>;
+export { Tooltip, TooltipContent, type TooltipContentProps, type TooltipProps, TooltipProvider, type TooltipProviderProps, TooltipTrigger, type TooltipTriggerProps, };
