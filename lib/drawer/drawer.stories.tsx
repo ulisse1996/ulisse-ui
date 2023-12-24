@@ -4,33 +4,33 @@ import { Menu } from 'lucide-react';
 
 import { Button } from '@/button';
 import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/sheet';
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@/drawer';
 
-const meta: Meta<typeof Sheet> = {
-  component: Sheet,
+const meta: Meta<typeof Drawer> = {
+  component: Drawer,
   title: 'Components/Drawer',
 };
 
-type Story = StoryObj<typeof Sheet>;
+type Story = StoryObj<typeof Drawer>;
 
 export const Default: Story = {
   render: () => {
     return (
-      <Sheet>
-        <SheetTrigger asChild>
+      <Drawer>
+        <DrawerTrigger asChild>
           <Button size="icon">
             <Menu />
           </Button>
-        </SheetTrigger>
-        <SheetContent className="items-center" side="right">
-          <SheetHeader>
-            <SheetTitle>{`I'm a simple Drawer`}</SheetTitle>
-          </SheetHeader>
+        </DrawerTrigger>
+        <DrawerContent className="items-center" side="right">
+          <DrawerHeader>
+            <DrawerTitle>{`I'm a simple Drawer`}</DrawerTitle>
+          </DrawerHeader>
           <Image
             src="https://source.unsplash.com/random/1280x720/?cat"
             alt="Fruit"
@@ -39,8 +39,35 @@ export const Default: Story = {
             height={600}
             className="h-48 w-48 rounded-md"
           />
-        </SheetContent>
-      </Sheet>
+        </DrawerContent>
+      </Drawer>
+    );
+  },
+};
+
+export const Left: Story = {
+  render: () => {
+    return (
+      <Drawer>
+        <DrawerTrigger asChild>
+          <Button size="icon">
+            <Menu />
+          </Button>
+        </DrawerTrigger>
+        <DrawerContent className="items-center" side="left">
+          <DrawerHeader>
+            <DrawerTitle>{`I'm a simple Drawer`}</DrawerTitle>
+          </DrawerHeader>
+          <Image
+            src="https://source.unsplash.com/random/1280x720/?cat"
+            alt="Fruit"
+            layout="constrained"
+            width={600}
+            height={600}
+            className="h-48 w-48 rounded-md"
+          />
+        </DrawerContent>
+      </Drawer>
     );
   },
 };
