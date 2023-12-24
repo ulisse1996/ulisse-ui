@@ -50,10 +50,11 @@ const Pagination = forwardRef<HTMLElement, PaginationProps>(
             <li key={index}>
               <Button
                 onClick={() => handlePageChange(page.page)}
-                className="h-9 w-9 text-ellipsis px-2 hover:bg-primary hover:text-primary-foreground"
-                variant={
-                  currentPage === page.page ? 'primary' : 'outline-primary'
-                }
+                className={cn('h-9 w-9 text-ellipsis px-2', {
+                  'bg-transparent text-black hover:border-2 hover:border-gray-200 hover:bg-gray-200':
+                    currentPage !== page.page,
+                })}
+                variant={currentPage === page.page ? 'primary' : 'flat'}
               >
                 {page.isEllipsis ? '...' : page.page}
               </Button>
