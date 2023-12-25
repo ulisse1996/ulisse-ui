@@ -67,6 +67,7 @@ const Rating = forwardRef<HTMLDivElement, RatingProps>(
     } = props;
     return (
       <RatingGroup.Root
+        disabled={disabled}
         className="grid w-full max-w-sm items-center gap-1.5"
         {...props}
         ref={ref}
