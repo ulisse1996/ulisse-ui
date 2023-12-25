@@ -63,9 +63,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           {leftComponent && (
             <div
               ref={leftItemRef}
-              className={cn('absolute left-2 top-2', {
-                'opacity-50': disabled,
-              })}
+              className={cn(
+                'absolute left-2 top-0 h-full items-center inline-flex',
+                {
+                  'opacity-50': disabled,
+                },
+              )}
             >
               {leftComponent}
             </div>
@@ -73,9 +76,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           {rightComponent && (
             <div
               ref={rightItemRef}
-              className={cn('absolute right-2 top-2', {
-                'opacity-50': disabled,
-              })}
+              className={cn(
+                'absolute right-2 top-0 h-full items-center inline-flex',
+                {
+                  'opacity-50': disabled,
+                },
+              )}
             >
               {rightComponent}
             </div>
