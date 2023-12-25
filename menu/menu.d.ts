@@ -28,4 +28,4 @@ declare const MenuSeparator: import("react").ForwardRefExoticComponent<MenuSepar
 declare const MenuItem: import("react").ForwardRefExoticComponent<MenuItemProps & import("react").RefAttributes<HTMLDivElement>>;
 declare const MenuContent: import("react").ForwardRefExoticComponent<MenuContentProps & import("react").RefAttributes<HTMLDivElement>>;
 declare const MenuSubContent: import("react").ForwardRefExoticComponent<MenuSubContentProps & import("react").RefAttributes<HTMLDivElement>>;
-export { Menu, MenuContent, type MenuContentProps, MenuItem, type MenuItemProps, type MenuProps, MenuSeparator, type MenuSeparatorProps, MenuSub, MenuSubContent, type MenuSubContentProps, type MenuSubProps, MenuSubTrigger, type MenuSubTriggerProps, MenuTrigger, type MenuTriggerProps, };
+export { itemVariants, Menu, MenuContent, type MenuContentProps, MenuItem, type MenuItemProps, type MenuProps, MenuSeparator, type MenuSeparatorProps, MenuSub, MenuSubContent, type MenuSubContentProps, type MenuSubProps, MenuSubTrigger, type MenuSubTriggerProps, MenuTrigger, type MenuTriggerProps, };
