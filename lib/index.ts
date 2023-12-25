@@ -18,6 +18,7 @@ export * from './floating-button';
 export * from './footer';
 export * from './input';
 export * from './label';
+export * from './list';
 export * from './menu';
 export * from './navbar';
 export * from './pagination';

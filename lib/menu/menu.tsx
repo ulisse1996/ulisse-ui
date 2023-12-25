@@ -153,6 +153,7 @@ const MenuSubContent = forwardRef<
 MenuSubContent.displayName = 'MenuSubContent';
 
 export {
+  itemVariants,
   Menu,
   MenuContent,
   type MenuContentProps,

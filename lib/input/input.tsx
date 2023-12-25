@@ -1,5 +1,5 @@
 import type { InputHTMLAttributes, ReactNode } from 'react';
-import { forwardRef } from 'react';
+import { forwardRef, useEffect, useRef, useState } from 'react';
 
 import { Label } from '@/label';
 import { cn } from '@/utils';
@@ -24,11 +24,31 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     },
     ref,
   ) => {
+    const [paddingLeft, setPaddingLeft] = useState<number | undefined>();
+    const [paddingRight, setPaddingRight] = useState<number | undefined>();
+    const rightItemRef = useRef<HTMLDivElement>(null);
+    const leftItemRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      if (rightItemRef.current) {
+        const { width } = rightItemRef.current.getBoundingClientRect();
+        setPaddingRight(width + 10);
+      }
+      if (leftItemRef.current) {
+        const { width } = leftItemRef.current.getBoundingClientRect();
+        setPaddingLeft(width + 10);
+      }
+    }, []);
+
     return (
       <div className="grid w-full max-w-sm items-center gap-1.5">
         {label && <Label htmlFor={id}>{label}</Label>}
         <div className="relative">
           <input
+            style={{
+              paddingLeft,
+              paddingRight,
+            }}
             data-input={type}
             type={type}
             className={cn(
@@ -42,6 +62,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           />
           {leftComponent && (
             <div
+              ref={leftItemRef}
               className={cn('absolute left-2 top-2', {
                 'opacity-50': disabled,
               })}
@@ -51,6 +72,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
           {rightComponent && (
             <div
+              ref={rightItemRef}
               className={cn('absolute right-2 top-2', {
                 'opacity-50': disabled,
               })}
