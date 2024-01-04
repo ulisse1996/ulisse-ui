@@ -15,6 +15,7 @@ interface SelectContentProps extends SelectPrimitive.SelectContentProps {
 }
 interface SelectTriggerProps extends SelectPrimitive.SelectTriggerProps {
     label?: string;
+    wrapperClassName?: string;
 }
 interface SelectScrollUpProps extends SelectPrimitive.SelectScrollUpButtonProps {
 }
