@@ -23,7 +23,7 @@ transformation
 import { animations, colors, keyframes } from "ulisse-ui";
 
 export default {
-  content: ["./node_modules/ulisse-ui/dist/**/*.{js,ts,jsx,tsx}"],
+  content: ["./node_modules/@ulisse1996/ui/dist/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
