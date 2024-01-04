@@ -22,6 +22,7 @@ interface SelectContentProps extends SelectPrimitive.SelectContentProps {}
 
 interface SelectTriggerProps extends SelectPrimitive.SelectTriggerProps {
   label?: string;
+  wrapperClassName?: string;
 }
 
 interface SelectScrollUpProps
@@ -39,8 +40,13 @@ const SelectValue = SelectPrimitive.Value;
 const SelectTrigger = forwardRef<
   ElementRef<typeof SelectPrimitive.Trigger>,
   SelectTriggerProps
->(({ className, label, id, children, ...props }, ref) => (
-  <div className="grid w-full max-w-sm items-center gap-1.5">
+>(({ className, wrapperClassName, label, id, children, ...props }, ref) => (
+  <div
+    className={cn(
+      'grid w-full max-w-sm items-center gap-1.5',
+      wrapperClassName,
+    )}
+  >
     {label && <Label htmlFor={id}>{label}</Label>}
     <SelectPrimitive.Trigger
       ref={ref}
