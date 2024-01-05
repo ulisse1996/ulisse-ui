@@ -7,8 +7,9 @@ declare const avatarVariants: (props?: ({
 } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string;
 type AvatarProps<E extends ElementType = typeof defaultElement> = PolymorphicProps<E> & VariantProps<typeof avatarVariants> & {
     alt: string;
+    fallbackClassName?: string;
 };
-declare function InternalAvatar<T extends ElementType = typeof defaultElement>({ as, src, size, className, alt, ...props }: AvatarProps<T>, ref: ForwardedRef<HTMLSpanElement>): import("react/jsx-runtime").JSX.Element;
+declare function InternalAvatar<T extends ElementType = typeof defaultElement>({ as, src, size, className, alt, fallbackClassName, ...props }: AvatarProps<T>, ref: ForwardedRef<HTMLSpanElement>): import("react/jsx-runtime").JSX.Element;
 declare const Avatar: <T extends ElementType>(props: import("react").PropsWithoutRef<import("react").ComponentProps<T>> & {
     as?: T | undefined;
 } & {
@@ -17,6 +18,7 @@ declare const Avatar: <T extends ElementType>(props: import("react").PropsWithou
     size?: "sm" | "md" | "lg" | null | undefined;
 } & import("class-variance-authority/dist/types").ClassProp) | undefined) => string> & {
     alt: string;
+    fallbackClassName?: string | undefined;
 } & {
     ref?: ForwardedRef<HTMLSpanElement> | undefined;
 }) => ReturnType<typeof InternalAvatar>;
