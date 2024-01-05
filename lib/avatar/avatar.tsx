@@ -32,10 +32,19 @@ type AvatarProps<E extends ElementType = typeof defaultElement> =
   PolymorphicProps<E> &
     VariantProps<typeof avatarVariants> & {
       alt: string;
+      fallbackClassName?: string;
     };
 
 function InternalAvatar<T extends ElementType = typeof defaultElement>(
-  { as, src, size, className, alt, ...props }: AvatarProps<T>,
+  {
+    as,
+    src,
+    size,
+    className,
+    alt,
+    fallbackClassName,
+    ...props
+  }: AvatarProps<T>,
   ref: ForwardedRef<HTMLSpanElement>,
 ) {
   const Comp = as || 'img';
@@ -56,7 +65,11 @@ function InternalAvatar<T extends ElementType = typeof defaultElement>(
           className="h-full w-full object-cover"
         />
       )}
-      {showFallback && <p className="uppercase text-black">{alt.charAt(0)}</p>}
+      {showFallback && (
+        <p className={cn('uppercase text-black', fallbackClassName)}>
+          {alt.charAt(0)}
+        </p>
+      )}
     </span>
   );
 }
