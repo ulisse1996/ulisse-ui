@@ -3,7 +3,7 @@ import type { ComponentPropsWithoutRef, ElementRef } from 'react';
 import { forwardRef } from 'react';
 
 import { Label } from '@/label';
-import type { WithRequiredProperty } from '@/types';
+import type { WithRequiredProperty } from '@/utils';
 import { cn } from '@/utils';
 
 type SwitchWithLabel = WithRequiredProperty<

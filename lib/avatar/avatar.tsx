@@ -7,7 +7,7 @@ import type {
 } from 'react';
 import { forwardRef, useState } from 'react';
 
-import type { PolymorphicProps } from '@/types';
+import type { PolymorphicProps } from '@/utils';
 import { cn } from '@/utils';
 
 const defaultElement = 'img';

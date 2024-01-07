@@ -6,11 +6,21 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import pkg from './package.json';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import { copyFileSync, rename } from 'node:fs';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    dts({ include: ['lib'], exclude: ['lib/**/*.stories.{js,jsx,ts,tsx}'] }),
+    dts({
+      include: ['lib'], exclude: ['lib/**/*.stories.{js,jsx,ts,tsx}'],
+      afterBuild: () => {
+        globbySync('dist/**/*.d.ts').forEach((file) => {
+          copyFileSync(file, file.replace('.d.ts', '.d.cts'));
+          rename(file, file.replace('.d.ts', '.d.mts'), () => {
+          });
+        });
+      }
+    }),
     react(),
     tsconfigPaths()
   ],

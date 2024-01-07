@@ -1,7 +1,7 @@
 import type { ElementType, HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
 
-import type { PolymorphicProps } from '@/types';
+import type { PolymorphicProps } from '@/utils';
 import { cn } from '@/utils';
 
 interface FooterProps extends HTMLAttributes<HTMLDetailsElement> {}

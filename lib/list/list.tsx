@@ -8,7 +8,7 @@ import type {
 import { forwardRef } from 'react';
 
 import { itemVariants } from '@/menu/menu';
-import type { PolymorphicProps } from '@/types';
+import type { PolymorphicProps } from '@/utils';
 import { cn } from '@/utils';
 
 interface ListProps extends HTMLAttributes<HTMLDetailsElement> {}
