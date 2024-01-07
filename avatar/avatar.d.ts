@@ -1,6 +1,6 @@
 import type { VariantProps } from 'class-variance-authority';
 import type { ElementType, ForwardedRef } from 'react';
-import type { PolymorphicProps } from '../types';
+import type { PolymorphicProps } from '../utils';
 declare const defaultElement = "img";
 declare const avatarVariants: (props?: ({
     size?: "sm" | "md" | "lg" | null | undefined;

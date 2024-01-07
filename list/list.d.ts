@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes, ElementType, ForwardedRef, ForwardRefExoticComponent, HTMLAttributes } from 'react';
-import type { PolymorphicProps } from '../types';
+import type { PolymorphicProps } from '../utils';
 interface ListProps extends HTMLAttributes<HTMLDetailsElement> {
 }
 type ListItemProps<E extends ElementType = 'button'> = PolymorphicProps<E> & ButtonHTMLAttributes<HTMLButtonElement>;

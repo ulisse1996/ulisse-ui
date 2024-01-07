@@ -1,5 +1,5 @@
 import type { ElementType, HTMLAttributes } from 'react';
-import type { PolymorphicProps } from '../types';
+import type { PolymorphicProps } from '../utils';
 interface FooterProps extends HTMLAttributes<HTMLDetailsElement> {
 }
 type FooterLinkProps<T extends ElementType = typeof defaultElement> = PolymorphicProps<T>;

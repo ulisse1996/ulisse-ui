@@ -1,5 +1,5 @@
 import type { TextareaHTMLAttributes } from 'react';
-import type { WithRequiredProperty } from '../types';
+import type { WithRequiredProperty } from '../utils';
 interface TextareaWithLabel extends WithRequiredProperty<TextareaHTMLAttributes<HTMLTextAreaElement>, 'id'> {
     label: string;
 }
