@@ -42,4 +42,5 @@ export * from './theme';
 export * from './timeline';
 export * from './toast';
 export * from './tooltip';
+export * from './tree';
 export * from './typography';
